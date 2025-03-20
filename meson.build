@@ -288,6 +288,11 @@ if curl.found()
   config.set10('USE_CURL', true)
 endif
 
+vmlib = dependency('libvmlib',
+  required:        get_option('wasm'),
+  default_options: fallback_opt,
+)
+
 sdl2 = dependency('sdl2', required: get_option('sdl2'))
 if sdl2.found()
   client_src += 'src/unix/video/sdl.c'

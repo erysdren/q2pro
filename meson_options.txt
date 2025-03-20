@@ -64,6 +64,11 @@ option('libcurl',
   value: 'auto',
   description: 'libcurl support')
 
+option('wasm',
+  type: 'feature',
+  value: 'auto',
+  description: 'wasm support')
+
 option('libjpeg',
   type: 'feature',
   value: 'auto',
